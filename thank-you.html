@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - ComfortCare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Premium Banner -->
+    <div class="premium-banner">
+        <div class="premium-banner-content">
+            <div class="premium-banner-icons">
+                <a href="how-it-works.html" title="How It Works">How It Works</a>
+                <a href="services.html" title="Services">Services</a>
+                <a href="pricing.html" title="Pricing">Pricing</a>
+                <a href="index.html" title="Home">Home</a>
+            </div>
+            <div class="premium-banner-text">
+                <h1>ComfortCare Package</h1>
+                <p>Your Complete Medical Equipment Solution</p>
+                <div class="sale-message">
+                    This Complete Business Package is For Sale! • Turn-key medical equipment rental website • Launch in hours • Full source code included
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="back-to-home">← Home</a>
+    </div>
+
+    <!-- Contact Seller Banner -->
+    <div class="contact-seller-banner">
+        Interested in this business? <a href="buyer-contact.html">Contact Seller</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-middle">
+                <div class="nav-identity">
+                    <div class="nav-brand">
+                        <img src="logo.svg" alt="ComfortCare Logo" class="logo-image">
+                    </div>
+                    <div class="nav-title">Comfort Care</div>
+                </div>
+                <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="pricing.html">Cart</a></li>
+                <li><a href="payment.html">Payments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-cart">
+                <div class="cart-box" aria-live="polite">
+                    <span class="cart-box-title">Cart</span>
+                    <span class="cart-box-detail">
+                        <span id="headerCartCount">0 items</span>
+                        <span class="cart-box-sep">|</span>
+                        <span id="headerCartTotal">$0.00</span>
+                    </span>
+                </div>
+                <div class="nav-cart-main">
+                    <a href="order.html" class="btn btn-secondary btn-compact edit-cart-link">Edit Cart</a>
+                    <a href="pricing.html" class="btn btn-primary btn-compact">Pay</a>
+                </div>
+                <a id="cartEmailLink" href="mailto:contact@comfortcare-demo.com" class="btn btn-discount btn-mini">Email Cart for Discounts</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Payment Received! ✅</h1>
+            <p>Thank you for your payment. We're preparing your order.</p>
+        </div>
+    </section>
+
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="success-card">
+                <!-- Success Badge -->
+                <div class="success-badge">
+                    <div class="checkmark">✔</div>
+                </div>
+
+                <!-- Confirmation Details -->
+                <h2>Your Payment is Confirmed</h2>
+                <p class="confirmation-text">We've received your payment successfully. A confirmation email has been sent to your registered email address.</p>
+
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Status:</span>
+                        <span class="detail-value success">✓ Completed</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Next Step:</span>
+                        <span class="detail-value">Our team will contact you within 2 hours to finalize your order</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Need Help?</span>
+                        <span class="detail-value"><a href="tel:(555) 123-4567">Call (555) 123-4567</a></span>
+                    </div>
+                </div>
+
+                <!-- Return Button with Logo -->
+                <div class="return-section">
+                    <a href="index.html" class="return-button">
+                        <img src="logo.svg" alt="ComfortCare" class="return-logo">
+                        <span>Return to ComfortCare</span>
+                    </a>
+                </div>
+
+                <!-- Secondary Actions -->
+                <div class="secondary-actions">
+                    <a href="order.html" class="link-button">Browse More Equipment</a>
+                    <a href="contact.html" class="link-button">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden form for sending order confirmation email -->
+    <form id="orderConfirmationForm" action="https://formsubmit.co/contact@comfortcare-demo.com" method="POST" style="display: none;">
+        <input type="hidden" name="_subject" value="New ComfortCare Order - Payment Completed">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Thank you for your order! We will contact you within 2 hours to finalize delivery details.">
+        <input type="text" name="Session_ID" id="emailSessionId">
+        <input type="text" name="Customer_Name" id="emailCustomerName">
+        <input type="email" name="Customer_Email" id="emailCustomerEmail">
+        <input type="tel" name="Customer_Phone" id="emailCustomerPhone">
+        <input type="text" name="Street_Address" id="emailAddress">
+        <input type="text" name="City" id="emailCity">
+        <input type="text" name="State" id="emailState">
+        <input type="text" name="ZIP_Code" id="emailZip">
+        <input type="text" name="Start_Date" id="emailStartDate">
+        <input type="text" name="End_Date" id="emailEndDate">
+        <input type="text" name="Order_Items" id="emailOrderItems">
+        <input type="text" name="Order_Total" id="emailOrderTotal">
+        <input type="text" name="Additional_Notes" id="emailNotes">
+    </form>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Detect if this is a Stripe payment success
+        const params = new URLSearchParams(window.location.search);
+        const sessionId = params.get('session_id');
+        
+        if (sessionId) {
+            console.log('Payment successful! Session ID:', sessionId);
+            
+            // Get customer information and cart from localStorage
+            const customerInfo = JSON.parse(localStorage.getItem('customerInfo') || '{}');
+            const cart = JSON.parse(localStorage.getItem('pricingCartItems') || '[]');
+            
+            // Calculate total
+            let total = 0;
+            const orderItemsText = cart.map((item, index) => {
+                const itemTotal = item.unitPrice * item.quantity;
+                total += itemTotal;
+                return `${index + 1}. ${item.name} (${item.model}) - ${item.rateType} - Qty: ${item.quantity} - $${itemTotal.toFixed(2)}`;
+            }).join(' | ');
+            
+            // Send email with order details
+            if (customerInfo.name && orderItemsText) {
+                const form = document.getElementById('orderConfirmationForm');
+                document.getElementById('emailSessionId').value = sessionId;
+                document.getElementById('emailCustomerName').value = customerInfo.name || '';
+                document.getElementById('emailCustomerEmail').value = customerInfo.email || '';
+                document.getElementById('emailCustomerPhone').value = customerInfo.phone || '';
+                document.getElementById('emailAddress').value = customerInfo.address || '';
+                document.getElementById('emailCity').value = customerInfo.city || '';
+                document.getElementById('emailState').value = customerInfo.state || '';
+                document.getElementById('emailZip').value = customerInfo.zip || '';
+                document.getElementById('emailStartDate').value = customerInfo.startDate || '';
+                document.getElementById('emailEndDate').value = customerInfo.endDate || '';
+                document.getElementById('emailOrderItems').value = orderItemsText;
+                document.getElementById('emailOrderTotal').value = `$${total.toFixed(2)}`;
+                document.getElementById('emailNotes').value = customerInfo.notes || 'None';
+                
+                // Submit form automatically
+                form.submit();
+            }
+            
+            // Clear cart and customer info after successful payment
+            localStorage.removeItem('pricingCartItems');
+            localStorage.removeItem('customerInfo');
+            
+            // Update header to show empty cart
+            if (typeof updateHeaderCart === 'function') {
+                updateHeaderCart();
+            }
+        }
+    </script>
+</body>
+</html>
