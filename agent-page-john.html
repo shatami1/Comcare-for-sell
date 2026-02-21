@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Delivery - ComfortCare Agent</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .agent-profile {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .profile-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 6px solid rgba(255,255,255,0.3);
+        }
+        .agent-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .agent-title {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        .custom-url {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        .about-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        .about-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .contact-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        .contact-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .cta-order {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        .commission-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 30px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-middle">
+                <div class="nav-identity">
+                    <div class="nav-brand">
+                        <img src="logo.svg" alt="ComfortCare Logo" class="logo-image">
+                    </div>
+                    <div class="nav-title">ComfortCare</div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About John</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="services.html">Equipment</a></li>
+                </ul>
+            </div>
+            <div class="nav-cart">
+                <a href="services.html" class="btn btn-primary btn-compact">Browse Equipment</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Agent Profile Header -->
+    <section class="agent-profile">
+        <div class="container">
+            <div class="profile-photo">👤</div>
+            <h1 class="agent-name">John Delivery</h1>
+            <p class="agent-title" style="background: #1a237e; color: #fff; padding: 8px 24px; border-radius: 18px; display: inline-block; margin-bottom: 8px;">ComfortCare Equipment Specialist</p>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin: 15px 0; background: #1a237e; color: #fff; padding: 8px 24px; border-radius: 18px; display: inline-block;">Serving Atlanta Metro • 5 Years Experience</p>
+            <div class="custom-url">🌐 comcare.store/agent/john-delivery</div>
+            <div style="margin-top: 40px;">
+                <a href="services.html?agent=john-delivery" class="btn btn-light" style="font-size: 1.2rem; padding: 16px 40px;">Browse Equipment & Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">About John</h2>
+            <div class="about-card">
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 20px;">
+                    Hi there! I'm John Delivery, and I'm passionate about helping families and healthcare facilities find the right medical equipment. With over 5 years of experience in the Atlanta Metro area, I've helped hundreds of customers get the equipment they need quickly and affordably.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 20px;">
+                    Whether you need a hospital bed for home care, a wheelchair for mobility, or oxygen equipment for respiratory support, I'm here to guide you through the entire process. I personally ensure that every order is delivered on time and set up correctly.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #333;">
+                    Order through my page and you'll get my personal cell number for 24/7 support. I'm committed to making your equipment rental experience as smooth as possible!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Contact John</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 40px;">Get in touch directly for personalized service</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone</h3>
+                    <p style="color: #666; margin: 10px 0;">(555) 123-4567</p>
+                    <a href="tel:(555)123-4567" class="btn btn-secondary btn-compact" style="margin-top: 10px;">Call Now</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p style="color: #666; margin: 10px 0;">john@comcare.store</p>
+                    <a href="mailto:john@comcare.store" class="btn btn-secondary btn-compact" style="margin-top: 10px;">Send Email</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Service Area</h3>
+                    <p style="color: #666; margin: 10px 0;">Atlanta Metro</p>
+                    <p style="font-size: 0.9rem; color: #999;">Serving all surrounding areas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Order Section -->
+    <section class="cta-order">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to Order?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; opacity: 0.95;">Browse our equipment catalog and place your order through John's page</p>
+            <a href="services.html?agent=john-delivery" class="btn btn-light" style="font-size: 1.3rem; padding: 18px 50px; background: white; color: #28a745; font-weight: 700;">Browse Equipment Catalog</a>
+            <div class="commission-badge">
+                <p style="margin: 0; font-size: 1.1rem;">✓ Your order supports John • ✓ Same prices • ✓ Personalized service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>John Delivery</h4>
+                    <p>ComfortCare Equipment Specialist serving Atlanta Metro</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact John</h4>
+                    <p>Phone: <a href="tel:(555) 123-4567">(555) 123-4567</a></p>
+                    <p>Email: <a href="mailto:john@comcare.store">john@comcare.store</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html?agent=john-delivery">Equipment Catalog</a></li>
+                        <li><a href="#about">About John</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Become an Agent</h4>
+                    <ul>
+                        <li><a href="index.html">Learn More</a></li>
+                        <li><a href="contact.html">Apply Now</a></li>
+                        <li><a href="agent-login-demo.html">Agent Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ComfortCare Agent Network. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Architecture - ComfortCare</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+
+        .architecture {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .tier {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            border: 3px solid;
+            transition: transform 0.3s;
+        }
+
+        .tier:hover {
+            transform: translateY(-10px);
+        }
+
+        .tier-customer {
+            border-color: #28a745;
+        }
+
+        .tier-agent {
+            border-color: #007bff;
+        }
+
+        .tier-admin {
+            border-color: #dc3545;
+        }
+
+        .tier-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .tier-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .tier-subtitle {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .feature-list {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .feature-list li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+
+        .credentials {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        .credentials strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .flow-diagram {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .flow-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .flow-arrow {
+            font-size: 32px;
+            color: #667eea;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .demo-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-customer {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-agent {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-admin {
+            background: #dc3545;
+            color: white;
+        }
+
+        .demo-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 ComfortCare System Architecture</h1>
+        
+        <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px;">
+            Three-tier access system: Customers browse freely, Agents manage deliveries, Admin sees everything
+        </p>
+
+        <div class="architecture">
+            <!-- Customer Tier -->
+            <div class="tier tier-customer">
+                <div class="tier-icon">👥</div>
+                <div class="tier-title">Customer Portal</div>
+                <div class="tier-subtitle">Public Access - No Login Required</div>
+                
+                <div class="feature-list">
+                    <strong>Features:</strong>
+                    <ul>
+                        <li>✅ Browse equipment</li>
+                        <li>✅ Add to cart</li>
+                        <li>✅ Checkout with Stripe</li>
+                        <li>✅ Track orders</li>
+                        <li>✅ Email notifications</li>
+                    </ul>
+                </div>
+
+                <div class="credentials">
+                    <strong>Access:</strong>
+                    No login needed - fully public
+                </div>
+            </div>
+
+            <!-- Agent Tier -->
+            <div class="tier tier-agent">
+                <div class="tier-icon">🚚</div>
+                <div class="tier-title">Agent Portal</div>
+                <div class="tier-subtitle">Agent Login - Personal Dashboard</div>
+                
+                <div class="feature-list">
+                    <strong>Features:</strong>
+                    <ul>
+                        <li>✅ View assigned orders</li>
+                        <li>✅ Manage deliveries</li>
+                        <li>✅ Update status</li>
+                        <li>✅ Track earnings</li>
+                        <li>✅ Schedule pickups</li>
+                    </ul>
+                </div>
+
+                <div class="credentials">
+                    <strong>Login:</strong>
+                    Agent ID: AG-001<br>
+                    PIN: 1234
+                </div>
+            </div>
+
+            <!-- Admin Tier -->
+            <div class="tier tier-admin">
+                <div class="tier-icon">👑</div>
+                <div class="tier-title">Admin Portal</div>
+                <div class="tier-subtitle">Owner Dashboard - Full Access</div>
+                
+                <div class="feature-list">
+                    <strong>Features:</strong>
+                    <ul>
+                        <li>✅ View ALL orders</li>
+                        <li>✅ Total revenue</li>
+                        <li>✅ Manage agents</li>
+                        <li>✅ Assign orders</li>
+                        <li>✅ Financial reports</li>
+                    </ul>
+                </div>
+
+                <div class="credentials">
+                    <strong>Login:</strong>
+                    Username: admin<br>
+                    Password: admin123
+                </div>
+            </div>
+        </div>
+
+        <!-- Business Flow -->
+        <div class="flow-diagram">
+            <div class="flow-title">📦 Complete Order Workflow</div>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div style="font-size: 32px; margin-bottom: 10px;">1️⃣</div>
+                    <strong>Customer Orders</strong>
+                    <p style="font-size: 13px; color: #666; margin-top: 10px;">
+                        Browses website, adds to cart, pays via Stripe
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div style="font-size: 32px; margin-bottom: 10px;">2️⃣</div>
+                    <strong>System Processes</strong>
+                    <p style="font-size: 13px; color: #666; margin-top: 10px;">
+                        Creates order, assigns agent, calculates commission
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div style="font-size: 32px; margin-bottom: 10px;">3️⃣</div>
+                    <strong>Agent Delivers</strong>
+                    <p style="font-size: 13px; color: #666; margin-top: 10px;">
+                        Logs in, sees order, delivers equipment
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div style="font-size: 32px; margin-bottom: 10px;">4️⃣</div>
+                    <strong>Admin Monitors</strong>
+                    <p style="font-size: 13px; color: #666; margin-top: 10px;">
+                        Sees all transactions, tracks revenue
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Access Control Info -->
+        <div class="info-box">
+            <h3>🔐 Access Control & Privacy</h3>
+            <ul>
+                <li><strong>Customers:</strong> Never see agent system or internal operations</li>
+                <li><strong>Agents:</strong> Only see their own orders and earnings (can't see other agents)</li>
+                <li><strong>Admin (You):</strong> See everything - all orders, all agents, complete financials</li>
+            </ul>
+            <p style="margin-top: 15px;">
+                <strong>🔒 Security:</strong> JWT authentication, role-based access control, encrypted sessions
+            </p>
+        </div>
+
+        <!-- Demo Buttons -->
+        <div class="button-group">
+            <a href="index.html" class="demo-button btn-customer">
+                👥 Try Customer Portal
+            </a>
+            <a href="agent-login.html" class="demo-button btn-agent">
+                🚚 Try Agent Portal
+            </a>
+        </div>
+
+        <!-- Revenue Example -->
+        <div class="flow-diagram" style="margin-top: 40px;">
+            <div class="flow-title">💰 Revenue Distribution Example</div>
+            <div style="background: white; padding: 30px; border-radius: 8px;">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center;">
+                    <div>
+                        <div style="font-size: 48px; font-weight: 700; color: #28a745;">$400</div>
+                        <div style="color: #666; margin-top: 10px;">Customer Payment</div>
+                        <div style="font-size: 13px; color: #999; margin-top: 5px;">Hospital Bed - Monthly Rental</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 48px; font-weight: 700; color: #007bff;">$100</div>
+                        <div style="color: #666; margin-top: 10px;">Agent Commission</div>
+                        <div style="font-size: 13px; color: #999; margin-top: 5px;">25% to Agent</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 48px; font-weight: 700; color: #dc3545;">$300</div>
+                        <div style="color: #666; margin-top: 10px;">Your Revenue</div>
+                        <div style="font-size: 13px; color: #999; margin-top: 5px;">75% to Business</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 30px; color: #666;">
+                    💡 <strong>Automatic:</strong> Commissions calculated and tracked for every order
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

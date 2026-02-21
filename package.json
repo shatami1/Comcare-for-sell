@@ -1,11 +1,12 @@
 {
-  "name": "comfortcare-checkout",
+  "name": "comfortcare-agent-system",
   "version": "1.0.0",
   "private": true,
-  "description": "ComfortCare checkout and form server",
-  "main": "server.js",
+  "description": "ComfortCare agent management and checkout system",
+  "main": "api-server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node api-server.js",
+    "dev": "nodemon api-server.js",
     "form-server": "node form-server.js"
   },
   "dependencies": {
@@ -14,6 +15,8 @@
     "stripe": "^14.25.0",
     "nodemailer": "^6.9.7",
     "cors": "^2.8.5",
-    "body-parser": "^1.20.2"
+    "body-parser": "^1.20.2",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3"
   }
 }

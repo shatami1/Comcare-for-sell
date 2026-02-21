@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Rodriguez - ComfortCare Agent</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .agent-profile {
+            background: linear-gradient(135deg, #e83e8c 0%, #fd7e14 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .profile-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 6px solid rgba(255,255,255,0.3);
+        }
+        .agent-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .agent-title {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        .custom-url {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        .about-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        .about-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .specialty-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .specialty-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .contact-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        .contact-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .cta-order {
+            background: linear-gradient(135deg, #e83e8c 0%, #fd7e14 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-middle">
+                <div class="nav-identity">
+                    <div class="nav-brand">
+                        <img src="logo.svg" alt="ComfortCare Logo" class="logo-image">
+                    </div>
+                    <div class="nav-title">ComfortCare</div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Sarah</a></li>
+                    <li><a href="#specialties">Specialties</a></li>
+                    <li><a href="services.html">Equipment</a></li>
+                </ul>
+            </div>
+            <div class="nav-cart">
+                <a href="services.html" class="btn btn-primary btn-compact">Browse Equipment</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Agent Profile Header -->
+    <section class="agent-profile">
+        <div class="container">
+            <div class="profile-photo">👩</div>
+            <h1 class="agent-name">Sarah Rodriguez</h1>
+            <p class="agent-title">Senior Medical Equipment Consultant</p>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin: 15px 0;">Houston Area • Bilingual (English/Spanish) • 8 Years Experience</p>
+            <div class="custom-url">🌐 comfortcare.com/agent/sarah-rodriguez</div>
+            <div style="margin-top: 40px;">
+                <a href="services.html?agent=sarah-rodriguez" class="btn btn-light" style="font-size: 1.2rem; padding: 16px 40px;">Browse Equipment & Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">About Sarah</h2>
+            <div class="about-card">
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 20px;">
+                    ¡Hola! I'm Sarah Rodriguez, and I've been helping families in the Houston area for over 8 years. As a bilingual equipment specialist (English and Spanish), I'm dedicated to making sure every family understands their options and gets exactly what they need.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 20px;">
+                    I specialize in home healthcare setups, particularly for elderly patients and post-surgery recovery. My background as a former nurse gives me unique insight into what patients really need for comfort and recovery.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #333;">
+                    When you order through my page, you're not just renting equipment – you're getting a healthcare partner who genuinely cares about your wellbeing. I'm available 24/7 for my clients!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="specialties" style="padding: 60px 20px; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">My Specialties</h2>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <div class="specialty-icon">🛏️</div>
+                    <h3>Home Care Setup</h3>
+                    <p style="color: #666; margin-top: 10px;">Complete bedroom conversions for at-home care</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">🏥</div>
+                    <h3>Post-Surgery</h3>
+                    <p style="color: #666; margin-top: 10px;">Recovery equipment and mobility aids</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">👵</div>
+                    <h3>Elderly Care</h3>
+                    <p style="color: #666; margin-top: 10px;">Safety and comfort for seniors</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">🌎</div>
+                    <h3>Bilingual Service</h3>
+                    <p style="color: #666; margin-top: 10px;">Servicio completo en español</p>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div style="max-width: 800px; margin: 60px auto 0;">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">What Clients Say</h3>
+                <div class="testimonial-card">
+                    <p style="color: #666; font-style: italic; margin-bottom: 15px;">"Sarah was amazing! She helped my mother transition home from the hospital and made sure we had everything we needed. Her Spanish-speaking skills helped my abuela feel so comfortable!"</p>
+                    <p style="color: #333; font-weight: 600;">- Maria T., Houston</p>
+                </div>
+                <div class="testimonial-card">
+                    <p style="color: #666; font-style: italic; margin-bottom: 15px;">"Professional, caring, and incredibly knowledgeable. Sarah answered all my questions and the equipment was delivered same-day. Highly recommend!"</p>
+                    <p style="color: #333; font-weight: 600;">- Robert K., Houston</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Contact Sarah</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 40px;">Reach out anytime – I'm here to help!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone / Text</h3>
+                    <p style="color: #666; margin: 10px 0;">(555) 987-6543</p>
+                    <a href="tel:(555)987-6543" class="btn btn-secondary btn-compact" style="margin-top: 10px;">Call Now</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p style="color: #666; margin: 10px 0;">sarah@comfortcare.com</p>
+                    <a href="mailto:sarah@comfortcare.com" class="btn btn-secondary btn-compact" style="margin-top: 10px;">Send Email</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Service Area</h3>
+                    <p style="color: #666; margin: 10px 0;">Greater Houston</p>
+                    <p style="font-size: 0.9rem; color: #999;">All surrounding counties</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Order Section -->
+    <section class="cta-order">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Let's Get You Equipped!</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; opacity: 0.95;">Browse our catalog and order through Sarah's page for personalized service</p>
+            <a href="services.html?agent=sarah-rodriguez" class="btn btn-light" style="font-size: 1.3rem; padding: 18px 50px; background: white; color: #e83e8c; font-weight: 700;">View Equipment Catalog</a>
+            <div style="background: rgba(255,255,255,0.2); padding: 20px 30px; border-radius: 12px; display: inline-block; margin-top: 30px;">
+                <p style="margin: 0; font-size: 1.1rem;">✓ Same-day delivery available • ✓ Bilingual support • ✓ 24/7 availability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sarah Rodriguez</h4>
+                    <p>Senior Medical Equipment Consultant serving Greater Houston</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Sarah</h4>
+                    <p>Phone: <a href="tel:(555) 987-6543">(555) 987-6543</a></p>
+                    <p>Email: <a href="mailto:sarah@comcare.store">sarah@comcare.store</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html?agent=sarah-rodriguez">Equipment Catalog</a></li>
+                        <li><a href="#about">About Sarah</a></li>
+                        <li><a href="#specialties">Specialties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Become an Agent</h4>
+                    <ul>
+                        <li><a href="index.html">Learn More</a></li>
+                        <li><a href="contact.html">Apply Now</a></li>
+                        <li><a href="agent-login-demo.html">Agent Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ComfortCare Agent Network. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

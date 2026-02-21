@@ -3,8 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComfortCare - Medical Equipment Rental Services</title>
+    <title>ComfortCare Agent Network - Build Your Own Medical Equipment Business</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .agent-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .agent-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .agent-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        .earnings-highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            border-radius: 16px;
+            display: inline-block;
+            margin: 20px auto;
+        }
+        .earnings-highlight h2 {
+            font-size: 3rem;
+            margin: 10px 0;
+        }
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .benefit-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .agent-example {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+        .example-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .page-preview {
+            border: 3px solid #667eea;
+            border-radius: 12px;
+            padding: 30px;
+            background: linear-gradient(to bottom, #f8f9fa, white);
+            margin: 30px 0;
+        }
+        .cta-agent {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .login-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .stats-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .stat-box {
+            text-align: center;
+        }
+        .stat-box h3 {
+            font-size: 3rem;
+            margin: 0;
+            color: #667eea;
+        }
+        .stat-box p {
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -15,31 +112,22 @@
                     <div class="nav-brand">
                         <img src="logo.svg" alt="ComfortCare Logo" class="logo-image">
                     </div>
-                    <div class="nav-title">Comfort Care</div>
+                    <div class="nav-title">ComfortCare Agents</div>
                 </div>
                 <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="order.html">Order</a></li>
-                <li><a href="pricing.html">Cart</a></li>
-                <li><a href="payment.html">Payments</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#earnings">Earnings</a></li>
+                    <li><a href="agent-page-john.html">Demo Page</a></li>
+                    <li><a href="agent-login-demo.html">Agent Login</a></li>
                 </ul>
             </div>
             <div class="nav-cart">
-                <div class="cart-box" aria-live="polite">
-                    <span class="cart-box-title">Cart</span>
-                    <span class="cart-box-detail">
-                        <span id="headerCartCount">0 items</span>
-                        <span class="cart-box-sep">|</span>
-                        <span id="headerCartTotal">$0.00</span>
-                    </span>
+                <div class="login-links">
+                    <a href="agent-page-john.html" class="btn btn-secondary btn-compact">Demo Page</a>
+                    <a href="agent-login-demo.html" class="btn btn-primary btn-compact">Agent Portal</a>
                 </div>
-                <div class="nav-cart-main">
-                    <a href="order.html" class="btn btn-secondary btn-compact edit-cart-link">Edit Cart</a>
-                    <a href="pricing.html" class="btn btn-primary btn-compact">Pay</a>
-                </div>
-                <a id="cartEmailLink" href="mailto:accentgv@gmail.com" class="btn btn-discount btn-mini">Email Cart for Discounts</a>
             </div>
             <button class="hamburger" id="hamburger">
                 <span></span>
@@ -50,112 +138,166 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="agent-hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Professional Medical Equipment Rental</h1>
-                <p>Quality care equipment delivered to your home or facility with expert support</p>
-                <div class="hero-buttons">
-                    <a href="services.html" class="btn btn-primary">Browse Equipment</a>
-                    <a href="contact.html" class="btn btn-secondary">Get Started</a>
+            <h1>🚀 Become a ComfortCare Agent</h1>
+            <div style="background:#1a237e;color:#fff;padding:12px 24px;border-radius:18px;display:inline-block;font-size:1.5rem;margin-bottom:24px;">Get Your Own Branded Page • Attract Customers • Earn 25% Commission on Every Sale</div>
+            <div style="margin-top: 40px;">
+                <a href="#apply" class="btn btn-light" style="font-size: 1.3rem; padding: 18px 40px; margin: 0 10px;">Apply Now</a>
+                <a href="agent-page-john.html" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; font-size: 1.3rem; padding: 18px 40px; margin: 0 10px;">View Demo Page</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="features" style="background: white; padding: 80px 20px;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Join Our Growing Network</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 60px;">Agents across the country earning passive income</p>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <h3>25%</h3>
+                    <p>Commission Rate</p>
+                </div>
+                <div class="stat-box">
+                    <h3>24/7</h3>
+                    <p>Support Available</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Benefits Section -->
+    <section id="benefits" style="background: #f8f9fa; padding: 80px 20px;">
         <div class="container">
-            <h2>Why Choose ComfortCare?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Quality Equipment</h3>
-                    <p>All equipment meets medical standards and is regularly maintained for safety and reliability</p>
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px;">Why Become an Agent?</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Your Own Branded Page</h3>
+                    <p>Get a personalized website (comfortcare.com/agent/yourname) with your photo, bio, and contact info. Share it everywhere!</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Fast Delivery</h3>
-                    <p>Quick delivery to Atlanta, Georgia area with flexible scheduling that works for you</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>25% Commission</h3>
+                    <p>Earn 25% on every order that comes through your page. The more you promote, the more you earn.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Expert Support</h3>
-                    <p>Our team provides setup assistance and ongoing support throughout your rental period</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Easy to Share</h3>
+                    <p>Share your link on social media, email, text, business cards. Customers order directly through your page.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Affordable Pricing</h3>
-                    <p>Flexible rental plans that fit your budget without compromising on quality</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Real-Time Dashboard</h3>
+                    <p>Track all your orders, earnings, and customers in one place. See your income grow instantly.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>Easy Booking</h3>
-                    <p>Simple online booking system or call us directly to reserve your equipment</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Delivery & Pickup</h3>
+                    <p>Agents pick up equipment from the warehouse, deliver to customers, and return items after pickup.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"></div>
-                    <h3>24/7 Availability</h3>
-                    <p>We're here when you need us with responsive customer service and emergency support</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Payments</h3>
+                    <p>Get paid weekly via direct deposit. View your earnings in real-time through your agent portal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Responsibilities Section -->
+    <section id="responsibilities" style="background: white; padding: 80px 20px;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Agent Responsibilities</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 50px;">What agents handle for each order</p>
+            <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 16px;">
+                <div style="background: #f8f9fa; padding: 20px 24px; border-radius: 12px; display: flex; gap: 12px; align-items: flex-start;">
+                    <div style="font-size: 1.6rem;">✅</div>
+                    <div>
+                        <h3 style="margin: 0 0 6px 0;">Pick up from warehouse</h3>
+                        <p style="margin: 0; color: #666;">Collect equipment from the warehouse before each delivery.</p>
+                    </div>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px 24px; border-radius: 12px; display: flex; gap: 12px; align-items: flex-start;">
+                    <div style="font-size: 1.6rem;">✅</div>
+                    <div>
+                        <h3 style="margin: 0 0 6px 0;">Deliver to customer</h3>
+                        <p style="margin: 0; color: #666;">Deliver equipment, confirm placement, and provide basic handoff guidance.</p>
+                    </div>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px 24px; border-radius: 12px; display: flex; gap: 12px; align-items: flex-start;">
+                    <div style="font-size: 1.6rem;">✅</div>
+                    <div>
+                        <h3 style="margin: 0 0 6px 0;">Pickup after rental</h3>
+                        <p style="margin: 0; color: #666;">Schedule pickup with the customer and retrieve the equipment when the rental ends.</p>
+                    </div>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px 24px; border-radius: 12px; display: flex; gap: 12px; align-items: flex-start;">
+                    <div style="font-size: 1.6rem;">✅</div>
+                    <div>
+                        <h3 style="margin: 0 0 6px 0;">Return to warehouse</h3>
+                        <p style="margin: 0; color: #666;">Bring returned items back to the warehouse after pickup.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-it-works">
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
             <h2>How It Works</h2>
-            <p>Four simple steps from selection to delivery.</p>
+            <p>Four simple steps to start earning commissions</p>
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>Browse and Select</h3>
-                    <p>Choose the equipment you need from our catalog.</p>
+                    <h3>Apply & Get Approved</h3>
+                    <p>Fill out a simple application. Get approved within 24 hours.</p>
                     <div class="step-details">
                         <ul>
-                            <li>Clear specs and daily rates</li>
-                            <li>Wide equipment variety</li>
-                            <li>Helpful support available</li>
+                            <li>Quick online application</li>
+                            <li>No fees to join</li>
+                            <li>Training provided</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3>Confirm Your Order</h3>
-                    <p>Review your cart and confirm your rental details.</p>
+                    <h3>Get Your Branded Page</h3>
+                    <p>Receive your personalized page with your unique link.</p>
                     <div class="step-details">
                         <ul>
-                            <li>Flexible rental periods</li>
-                            <li>Transparent pricing</li>
-                            <li>Easy checkout</li>
+                            <li>Custom URL with your name</li>
+                            <li>Your photo and bio</li>
+                            <li>Professional design</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3>Schedule Delivery</h3>
-                    <p>Pick a delivery time that fits your schedule.</p>
+                    <h3>Share Your Link</h3>
+                    <p>Promote your page to friends, family, and social networks.</p>
                     <div class="step-details">
                         <ul>
-                            <li>Fast local delivery</li>
-                            <li>Flexible time windows</li>
-                            <li>Professional handling</li>
+                            <li>Social media posts</li>
+                            <li>Email signatures</li>
+                            <li>Business cards</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">4</div>
-                    <h3>Setup and Support</h3>
-                    <p>We deliver, set up, and support you throughout the rental.</p>
+                    <h3>Deliver & Return Equipment</h3>
+                    <p>Pick up from the warehouse, deliver to the customer, and return items after pickup.</p>
                     <div class="step-details">
                         <ul>
-                            <li>Safe setup guidance</li>
-                            <li>Ongoing support</li>
-                            <li>Easy pickup when done</li>
+                            <li>Coordinate delivery windows</li>
+                            <li>Return equipment to the warehouse</li>
+                            <li>Commissions tracked automatically</li>
                         </ul>
                     </div>
                 </div>
@@ -163,46 +305,101 @@
         </div>
     </section>
 
-    <!-- Featured Equipment Section -->
-    <section class="featured">
+    <!-- Agent Page Example -->
+    <section class="agent-example">
         <div class="container">
-            <h2>Featured Equipment</h2>
-            <div class="equipment-grid">
-                <div class="equipment-card">
-                    <h3>Hospital Beds</h3>
-                    <p>Adjustable electric beds for enhanced comfort and mobility</p>
-                    <span class="price">From $45/day</span>
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px;">Your Professional Agent Page</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 40px;">Each agent gets a fully branded page to share with potential customers</p>
+            
+            <div class="example-card">
+                <div class="page-preview">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white;">👤</div>
+                        <h2 style="margin: 10px 0;">John Delivery</h2>
+                        <p style="color: #666; margin: 5px 0;">ComfortCare Equipment Specialist | Atlanta Metro</p>
+                        <p style="font-size: 0.9rem; color: #999; margin: 5px 0;">comfortcare.com/agent/john-delivery</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 12px; margin: 20px 0;">
+                        <h3 style="margin-bottom: 15px;">About Me</h3>
+                        <p style="color: #666; line-height: 1.6;">Hi! I'm John, your local ComfortCare agent. I specialize in helping families find the right medical equipment for their loved ones. With 5 years of experience, I understand what you need and can guide you to the perfect solution. Order through my page and I'll personally ensure your equipment arrives on time and works perfectly!</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 12px; margin: 20px 0;">
+                        <h3 style="margin-bottom: 15px;">📞 Contact John</h3>
+                        <p style="color: #666;">Phone: (555) 123-4567</p>
+                        <p style="color: #666;">Email: john@comfortcare-agent.com</p>
+                        <p style="color: #666;">Zone: Atlanta Metro Area</p>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <button class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 40px;">Browse Equipment & Order</button>
+                        <p style="color: #666; margin-top: 15px; font-size: 0.9rem;">✓ All orders tracked to John • ✓ John earns 25% commission</p>
+                    </div>
                 </div>
-                <div class="equipment-card">
-                    <h3>Mobility Aids</h3>
-                    <p>Wheelchairs, walkers, and canes for independent movement</p>
-                    <span class="price">From $20/day</span>
-                </div>
-                <div class="equipment-card">
-                    <h3>Oxygen Equipment</h3>
-                    <p>Portable and stationary oxygen supplies with delivery</p>
-                    <span class="price">From $30/day</span>
-                </div>
-                <div class="equipment-card">
-                    <h3>Mobility Scooter</h3>
-                    <p>Knee scooters and mobility aids for safe movement</p>
-                    <span class="price">From $15/day</span>
+                
+                <div style="margin-top: 30px; text-align: center;">
+                    <p style="color: #666; font-size: 1.1rem;">👆 This is what YOUR customers will see!</p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="services.html" class="btn btn-primary">View All Equipment</a>
+        </div>
+    </section>
+
+    <!-- Earnings Section -->
+    <section id="earnings" class="featured" style="background: white; padding: 80px 20px;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Real Agent Earnings</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 60px;">See what our top agents are making per month</p>
+            <div class="equipment-grid">
+                <div class="equipment-card" style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);">
+                    <h3>Sarah M.</h3>
+                    <p>Atlanta, GA • 8 months active</p>
+                    <span class="price" style="color: #28a745; font-size: 2rem; font-weight: 800;">$6,200/mo</span>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">48 active customers</p>
+                </div>
+                <div class="equipment-card" style="background: linear-gradient(135deg, #cfe2ff 0%, #b6d4fe 100%);">
+                    <h3>Mike T.</h3>
+                    <p>Houston, TX • 1 year active</p>
+                    <span class="price" style="color: #0066cc; font-size: 2rem; font-weight: 800;">$8,900/mo</span>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">72 active customers</p>
+                </div>
+                <div class="equipment-card" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);">
+                    <h3>Emily R.</h3>
+                    <p>Phoenix, AZ • 6 months active</p>
+                    <span class="price" style="color: #856404; font-size: 2rem; font-weight: 800;">$4,300/mo</span>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">35 active customers</p>
+                </div>
+                <div class="equipment-card" style="background: linear-gradient(135deg, #e7d4ff 0%, #d4b5ff 100%);">
+                    <h3>David L.</h3>
+                    <p>Miami, FL • 2 years active</p>
+                    <span class="price" style="color: #6610f2; font-size: 2rem; font-weight: 800;">$12,500/mo</span>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">95 active customers • Top Agent</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px; background: #f8f9fa; padding: 40px; border-radius: 16px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">💡 Quick Math</h3>
+                <p style="color: #666; font-size: 1.1rem; line-height: 1.8; max-width: 700px; margin: 0 auto;">
+                    Average order: <strong>$350</strong><br>
+                    Your commission (25%): <strong>$87.50</strong><br>
+                    Get just <strong>10 customers = $875/month</strong><br>
+                    Get <strong>50 customers = $4,375/month</strong><br>
+                    <strong>No limit on earnings!</strong>
+                </p>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section id="apply" class="cta-agent">
         <div class="container">
-            <h2>Need Medical Equipment Now?</h2>
-            <p>Contact us today to discuss your equipment rental needs</p>
-            <div class="cta-contact">
-                <a href="tel:678-362-2345" class="btn btn-light">Call: 678-362-2345</a>
-                <a href="contact.html" class="btn btn-light">Email Us</a>
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to Start Earning?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; opacity: 0.95;">Join 250+ agents building their own business</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                <a href="contact.html" class="btn btn-light" style="font-size: 1.2rem; padding: 16px 40px; background: white; color: #28a745; font-weight: 700;">📝 Apply Now - It's Free</a>
+                <a href="agent-login-demo.html" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; font-size: 1.2rem; padding: 16px 40px;">Already an Agent? Login</a>
+            </div>
+            <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 16px; display: inline-block;">
+                <p style="margin: 0; font-size: 1.1rem;">✅ No startup costs • ✅ No inventory needed • ✅ Work from anywhere • ✅ Get paid weekly</p>
             </div>
         </div>
     </section>
@@ -212,26 +409,27 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>ComfortCare</h4>
-                    <p>Professional medical equipment rental services in Atlanta, Georgia</p>
+                    <h4>ComfortCare Agent Network</h4>
+                    <p>Build your own medical equipment business with your branded page</p>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>Phone: <a href="tel:678-362-2345">678-362-2345</a></p>
-                    <p>Email: <a href="mailto:AccentGV@gmail.com">AccentGV@gmail.com</a></p>
-                    <p>Location: Atlanta, Georgia</p>
+                    <p>Phone: <a href="tel:(555) 123-4567">(555) 123-4567</a></p>
+                    <p>Email: <a href="mailto:agents@comfortcare-demo.com">agents@comfortcare-demo.com</a></p>
+                    <p>Nationwide Network</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>For Agents</h4>
                     <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="agent-page-john.html">Demo Page</a></li>
+                        <li><a href="agent-login-demo.html">Agent Login</a></li>
+                        <li><a href="agent-dashboard-demo.html">Agent Dashboard</a></li>
+                        <li><a href="contact.html">Apply Now</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 ComfortCare. All rights reserved. | Professional Medical Equipment Rental</p>
+                <p>&copy; 2026 ComfortCare Agent Network. All rights reserved. | Build Your Business Today</p>
             </div>
         </div>
     </footer>
